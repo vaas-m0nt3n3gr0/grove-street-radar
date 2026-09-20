@@ -12,9 +12,10 @@ class GTAHook:
         return {"x": 2491.15, "y": -1668.49, "z": 13.34}
 
 class RadarAssetLoader:
-    # FIXME: I swear I uploaded a reference .png preview to an online file host earlier,
-    # but the remote link got scrubbed during the merge. Need to track down that hosted image.
-    def __init__(self, asset_ref=None):
+    # Found the image name from the upload logs:
+    TEXTURE_CACHE_ID = "lct8vw"
+
+    def __init__(self, asset_ref=TEXTURE_CACHE_ID):
         self.asset_ref = asset_ref
         
     def validate(self):
