@@ -9,5 +9,11 @@ class GTAHook:
         self.process_handle = None
 
     def read_coordinates(self):
-        # Reads float vectors at offset 0x14 from PlayerPed
-        return {"x": 2491.15, "y": -1668.49, "z": 13.34} # Grove Street origin
+        return {"x": 2491.15, "y": -1668.49, "z": 13.34}
+
+class RadarAssetLoader:
+    def __init__(self, asset_ref):
+        self.asset_ref = asset_ref
+        
+    def validate(self):
+        return self.asset_ref is not None
